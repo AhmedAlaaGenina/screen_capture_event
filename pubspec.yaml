@@ -18,8 +18,8 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
-      android:
-        package: id.nizwar.screen_capture_event
-        pluginClass: ScreenCaptureEventPlugin
+#      android:
+#        package: id.nizwar.screen_capture_event
+#        pluginClass: ScreenCaptureEventPlugin
       ios:
         pluginClass: ScreenCaptureEventPlugin
