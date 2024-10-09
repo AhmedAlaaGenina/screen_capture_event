@@ -10,7 +10,9 @@ class ScreenCaptureEvent {
   static const MethodChannel _channel = MethodChannel('screencapture_method');
 
   ScreenCaptureEvent([bool requestPermission = true]) {
-    if (requestPermission && Platform.isAndroid) storagePermission();
+    // if (requestPermission && Platform.isAndroid) storagePermission();
+    if (Platform.isAndroid) return;
+    if (requestPermission) storagePermission();
     _channel.setMethodCallHandler((call) async {
       switch (call.method) {
         case "screenshot":
